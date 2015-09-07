@@ -59,20 +59,18 @@ def process_query(q):
                 subtitle = "vol ${num}"
             ))
 
-    if get_muted() != 'true':
-        if('mute'.startswith(op)):
-            results.append(alfred.Item(
-                attributes = {'arg': 'mute', 'autocomplete' : 'mute'},
-                title = "Mute",
-                subtitle = "vol mute"
-            ))
-    else:
-        if('unmute'.startswith(op)):
-            results.append(alfred.Item(
-                attributes = {'arg': 'unmute', 'autocomplete': 'unmute'},
-                title = "Unumte",
-                subtitle = "vol unmute"
-            ))
+    if('mute'.startswith(op)) and get_muted() != 'true':
+        results.append(alfred.Item(
+            attributes = {'arg': 'mute', 'autocomplete' : 'mute'},
+            title = "Mute",
+            subtitle = "vol mute"
+        ))
+    if('unmute'.startswith(op)) and get_muted() == 'true':
+        results.append(alfred.Item(
+            attributes = {'arg': 'unmute', 'autocomplete': 'unmute'},
+            title = "Unumte",
+            subtitle = "vol unmute"
+        ))
     if('up'.startswith(op)):
         if len(q) >= 2:
             val = parse_volume(q[1], 10)
