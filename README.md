@@ -14,8 +14,8 @@ Volume Control allows you to control the volume of your Mac with Alfred workflow
   - vol mid: set volume to 50%.
   - vol high: set volume to 75%.
 
-> All the above commands is searchable.   
-> And you can use first letters of a command, e.g. `vol u 20` means `vol up 20`, `vol mu` means `vol mute`.
+> All the above commands are searchable.   
+> And you can just type first several letters of a command, e.g. `vol u 20` means `vol up 20`, `vol mu` means `vol mute`.
 
 #Installation
 
