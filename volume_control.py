@@ -107,8 +107,8 @@ def process_query(q):
         ))
     if('low'.startswith(op)):
         results.append(alfred.Item(
-            attributes = {'arg': '20', 'autocomplete': 'low'},
-            title = "Low Volume: 20%",
+            attributes = {'arg': '25', 'autocomplete': 'low'},
+            title = "Low Volume: 25%",
             subtitle = "vol low"
         ))
     if('mid'.startswith(op)):
@@ -119,8 +119,8 @@ def process_query(q):
         ))
     if('high'.startswith(op)):
         results.append(alfred.Item(
-            attributes = {'arg': '80', 'autocomplete': 'high'},
-            title = "Hidgh Volume: 80%",
+            attributes = {'arg': '75', 'autocomplete': 'high'},
+            title = "Hidgh Volume: 75%",
             subtitle = "vol high"
         ))
 
