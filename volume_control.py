@@ -32,7 +32,7 @@ def parse_volume(s, default = 10):
         return default
 
 def process_query(q):
-    results = [] 
+    results = []
     if(len(q) == 0):
         results.append(alfred.Item(
             attributes = {'arg': '', 'valid': 'false'},
@@ -118,7 +118,7 @@ def process_query(q):
     if('high'.startswith(op)):
         results.append(alfred.Item(
             attributes = {'arg': '75', 'autocomplete': 'high'},
-            title = "Hidgh Volume: 75%",
+            title = "High Volume: 75%",
             subtitle = "vol high"
         ))
 
